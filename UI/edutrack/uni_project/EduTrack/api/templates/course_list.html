@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #eee;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>قائمة المواد</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>اسم المادة</th>
+            <th>عدد الساعات</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ course.course_id }}</td>
+            <td>{{ course.course_name }}</td>
+            <td>{{ course.credit_hours }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
